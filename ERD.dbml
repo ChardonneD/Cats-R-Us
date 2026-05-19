@@ -1,0 +1,40 @@
+// Cars 'R Us ERD
+
+Table Paints {
+  id int [pk, increment]
+  color varchar
+  price float
+}
+
+Table Interiors {
+  id int [pk, increment]
+  material varchar
+  price float
+}
+
+Table Technologies {
+  id int [pk, increment]
+  package varchar
+  price float
+}
+
+Table Wheels {
+  id int [pk, increment]
+  style varchar
+  price float
+}
+
+Table Orders {
+  id int [pk, increment]
+  paintId int
+  interiorId int
+  technologyId int
+  wheelId int
+  timestamp timestamp
+}
+
+// Defining the one-to-many relationships (Foreign Keys)
+Ref: Orders.paintId > Paints.id
+Ref: Orders.interiorId > Interiors.id
+Ref: Orders.technologyId > Technologies.id
+Ref: Orders.wheelId > Wheels.id
