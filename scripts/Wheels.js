@@ -12,7 +12,7 @@ export const Wheels = async () => {
     // Map over the wheels array to create the option tags
     const optionsArray = wheels.map(
         (wheel) => {
-            return `<option value="${wheel.id}">${wheel.style}</option>`
+        return `<option value="${wheel.id}">${wheel.style}</option>`
         }
     )
 

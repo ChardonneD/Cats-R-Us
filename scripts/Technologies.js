@@ -12,7 +12,7 @@ export const Technologies = async () => {
     // Map over the technologies array to create the option tags
     const optionsArray = technologies.map(
         (technology) => {
-            return `<option value="${technology.id}">${technology.package}</option>`
+        return `<option value="${technology.id}">${technology.package}</option>`
         }
     )
 

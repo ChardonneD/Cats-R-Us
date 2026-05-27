@@ -12,7 +12,7 @@ export const Interiors = async () => {
     //Map over the interiors array to create the option tags
     const optionsArray = interiors.map(
         (interior) => {
-            return `<option value="${interior.id}">${interior.material}</option>`
+        return `<option value="${interior.id}">${interior.material}</option>`
         }
     )
 

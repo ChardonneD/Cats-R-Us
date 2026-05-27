@@ -27,7 +27,7 @@ export const setInteriorId = (chosenInterior) => {
     console.log("Transient State updated:", transientState)
 }
 
-export const CustomCatOrder = async () => {
+export const CustomOrder = async () => {
     const postOptions = {
         method: "POST",
         headers: {
