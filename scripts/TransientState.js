@@ -40,6 +40,6 @@ export const CustomOrder = async () => {
     const response = await fetch("http://localhost:8088/orders", postOptions)
 
     //Broadcast a custom Cat Order event that the state has changed and a new order has been created
-    const customEvent = new CustomEvent("CustomCatOrder")
+    const customEvent = new CustomEvent("CustomOrder")
     document.dispatchEvent(customEvent)
 }

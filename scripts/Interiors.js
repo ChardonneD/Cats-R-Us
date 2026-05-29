@@ -1,4 +1,11 @@
-
+import { setInteriorId } from "./TransientState.js"
+// Listen for changes to the interior dropdown
+document.addEventListener("change", (event) => {
+    if (event.target.id === "interior") {
+        const selectedInteriorId = parseInt(event.target.value)
+        setInteriorId(selectedInteriorId)
+    }
+})
 
 export const Interiors = async () => {
     const response = await fetch("http://localhost:8088/interiors")

@@ -1,3 +1,13 @@
+import { setPaintId } from "./TransientState.js"
+
+// Listen for changes to the paint dropdown
+document.addEventListener("change", (event) => {
+    if (event.target.id === "paint") {
+        const selectedPaintId = parseInt(event.target.value)
+        setPaintId(selectedPaintId)
+    }
+})
+
 // scripts/Paints.js
 
 export const Paints = async () => {

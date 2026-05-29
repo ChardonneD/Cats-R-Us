@@ -7,6 +7,8 @@ import { Orders } from "./Orders.js" // import orders
 
 const mainContainer = document.querySelector("#mainContainer")
 
+
+
 const renderAllHTML = async () => {
     const paintsHTML = await Paints()
     const technologiesHTML = await Technologies()
@@ -28,3 +30,7 @@ const renderAllHTML = async () => {
 }
 
 renderAllHTML()
+//Listen for CustomOrder event 
+document.addEventListener("CustomOrder", () => {
+    renderAllHTML()
+})

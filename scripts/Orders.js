@@ -1,6 +1,6 @@
 // scripts/Orders.js
 export const Orders = async () => {
-    const fetchResponse = await fetch("http://localhost:8088/orders?_expand=metal&_expand=style&_expand=size")
+    const fetchResponse = await fetch("http://localhost:8088/orders?_expand=paint&_expand=technology&_expand=wheel&_expand=interior")
     const orders = await fetchResponse.json()
 
     // Map the array of objects to an array of HTML strings
