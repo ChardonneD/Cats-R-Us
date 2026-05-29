@@ -1,4 +1,10 @@
-    // scripts/Technologies.js
+import { setTechnologyId } from "./TransientState.js"
+
+document.addEventListener("change", (event) => {
+    if (event.target.id === "technology") {
+        setTechnologyId(parseInt(event.target.value))
+    }
+})
 
 export const Technologies = async () => {
     const response = await fetch("http://localhost:8088/technologies")

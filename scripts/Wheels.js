@@ -1,3 +1,11 @@
+import { setWheelId } from "./TransientState.js"
+
+document.addEventListener("change", (event) => {
+    if (event.target.id === "wheel") {
+        setWheelId(parseInt(event.target.value))
+    }
+})
+
 // scripts/Wheels.js
 
 export const Wheels = async () => {

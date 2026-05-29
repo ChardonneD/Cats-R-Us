@@ -6,6 +6,9 @@ export const Orders = async () => {
     // Map the array of objects to an array of HTML strings
     const ordersHTML = orders.map(
         (order) => {
+            if (!order.paint || !order.technology || !order.wheel || !order.interior) {
+                return ""
+            }
             // 2. Calculate the total price from the expanded objects
             const orderPrice = order.paint.price + order.technology.price + order.wheel.price + order.interior.price
 
@@ -16,9 +19,10 @@ export const Orders = async () => {
             })
 
             // 4. Return the HTML string with the calculated price
-            return `<section class="order">
-                Order #${order.id} cost ${formattedPrice}
-            </section>`
+            return `
+                <section class="order">
+                    ${order.paint.color} car with ${order.wheel.style} wheels, ${order.interior.material} interior, and the ${order.technology.package} for a total cost of ${formattedPrice}
+                </section>`
         }
     )
 
