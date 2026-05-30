@@ -20,7 +20,7 @@ export const setTechnologyId = (chosenTechnology) => {
 export const setWheelId = (chosenWheel) => {
     transientState.wheelId = chosenWheel
     console.log("Transient State updated:", transientState)
-}
+} 
 
 export const setInteriorId = (chosenInterior) => {
     transientState.interiorId = chosenInterior
